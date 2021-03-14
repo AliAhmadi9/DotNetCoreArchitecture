@@ -1,0 +1,24 @@
+﻿{
+  "name": "کار ساعت",
+  "short_name": "KarSaat",
+  "description": "KarSaat 100% Free Time Tracking Software",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "color": "#ffffff",
+  "background_color": "#20c4f4",
+  "theme_color": "#20c4f4",
+  "icons": [
+    {
+      "src": "image/icon/KarSaat192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "image/icon/KarSaat512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

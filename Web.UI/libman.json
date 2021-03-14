@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/lib/toastr.js/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "jalali-moment@3.3.9",
+      "destination": "wwwroot/lib/jalali-moment/"
+    }
+  ]
+}

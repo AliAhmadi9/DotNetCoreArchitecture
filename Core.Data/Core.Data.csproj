@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210101133127_AddIsDeletedAndArchivedToBaseEntity.cs" />
+    <Compile Remove="Migrations\20210101133127_AddIsDeletedAndArchivedToBaseEntity.Designer.cs" />
+    <Compile Remove="Migrations\20210101133552_AddIsDeletedAndArchivedToBaseEntity.cs" />
+    <Compile Remove="Migrations\20210101133552_AddIsDeletedAndArchivedToBaseEntity.Designer.cs" />
+    <Compile Remove="Migrations\20210105195125_AddPraiseAndValueToDatabase.cs" />
+    <Compile Remove="Migrations\20210105195125_AddPraiseAndValueToDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210126083741_SomeChangeInObjectiveAndItsLogs.cs" />
+    <Compile Remove="Migrations\20210126083741_SomeChangeInObjectiveAndItsLogs.Designer.cs" />
+    <Compile Remove="Migrations\20210126084146_SomeChangeInObjectiveAndItsLogs.cs" />
+    <Compile Remove="Migrations\20210126084146_SomeChangeInObjectiveAndItsLogs.Designer.cs" />
+    <Compile Remove="Migrations\20210130101208_ChangeCreatedDateValueInBaseEntity.cs" />
+    <Compile Remove="Migrations\20210130101208_ChangeCreatedDateValueInBaseEntity.Designer.cs" />
+    <Compile Remove="Migrations\20210130111616_ChangeCreatedDateValueInBaseEntity.cs" />
+    <Compile Remove="Migrations\20210130111616_ChangeCreatedDateValueInBaseEntity.Designer.cs" />
+    <Compile Remove="Migrations\20210130112243_ChangeCreatedDateValueInBaseEntity.cs" />
+    <Compile Remove="Migrations\20210130112243_ChangeCreatedDateValueInBaseEntity.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Entities\Core.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>

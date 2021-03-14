@@ -1,0 +1,65 @@
+﻿@model Services.Dto.UserDto
+
+@{
+    ViewData["Title"] = "ثبت نام";
+    Layout = "/Views/Shared/_LoginRegisterLayout.cshtml";
+}
+
+<!-- register section starts -->
+<section class="row flexbox-container">
+    <div class="col-xl-8 col-10">
+        <div class="card bg-authentication mb-0">
+            <div class="row m-0">
+                <!-- register section left -->
+                <div class="col-md-6 col-12 px-0">
+                    <div class="card disable-rounded-right mb-0 p-2 h-100 d-flex justify-content-center">
+                        <div class="card-header pb-1">
+                            <div class="card-title">
+                                <h4 class="text-center mb-2">ثبت نام</h4>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <p>
+                                <small class="line-height-2 d-inline-block">جهت ورود به سیستم هدف گذاری هدف سنج ابتدا ثبت نام کنید .</small>
+                            </p>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <form id="frmRegister">
+                                    <div class="form-group mb-50">
+                                        <label asp-for="FullName"></label>
+                                        <input type="text" asp-for="FullName" class="form-control" id="FullName" placeholder="نام و نام خانوادگی">
+                                        <span asp-validation-for="FullName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group mb-50">
+                                        <label class="text-bold-700" asp-for="Email"></label>
+                                        <input type="text" asp-for="Email" class="form-control text-left" id="Email" placeholder="آدرس ایمیل" dir="ltr">
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label class="text-bold-700" asp-for="Password"></label>
+                                        <input type="password" asp-for="Password" class="form-control text-left" id="Password" placeholder="رمز عبور" dir="ltr">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label class="text-bold-700" asp-for="ConfirmPassword"></label>
+                                        <input type="password" asp-for="ConfirmPassword" class="form-control text-left" id="ConfirmPassword" placeholder="تکرار رمز عبور" dir="ltr">
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                    <button type="submit" id="btnRegister" class="btn btn-primary glow position-relative w-100">ثبت نام<i id="icon-arrow" class="bx bx-left-arrow-alt"></i></button>
+                                </form>
+                                <hr>
+                                <div class="text-center"><small class="mr-25">حساب کاربری دارید؟</small><a asp-controller="Account" asp-action="Login"><small>ورود</small> </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- image section right -->
+                <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
+                    <img class="img-fluid" src="/assets/images/pages/register.png" alt="branding logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- register section endss -->

@@ -1,0 +1,718 @@
+﻿/* 
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+} */
+
+:root {
+    --primary-color: #5A8DEE;
+}
+
+.main-menu .navbar-header .navbar-brand .brand-text {
+    padding-right: 0 rem !important;
+}
+
+
+
+
+.header-objective {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.flexAllCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.StyleheadingCollapse {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+    display: grid;
+    grid-template-columns: 3fr auto auto;
+    grid-template-rows: 1fr;
+    /* display: flex; 
+    justify-content: space-between;
+    align-items: center;  */
+    /* overflow: hidden; */
+}
+
+
+
+.btnUpdateObjective {
+    font-size: 1vw;
+    margin: 5px 0;
+    height: 30px;
+}
+
+.menu3Point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    justify-self: flex-end;
+}
+
+.editObjective767Px {
+    display: none;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+    .editObjective767Px:hover {
+        color: var(--primary-color);
+    }
+
+.menu3Point:hover {
+    color: var(--primary-color);
+}
+
+.StyleheadingCollapse:hover .menu3Point {
+    visibility: visible;
+}
+
+.fa-arrow-circle-down:hover {
+    color: var(--primary-color);
+}
+
+.headerObective {
+    /* display: flex ;
+    justify-content: flex-end;
+    align-items: center; */
+    /* width: 100vw; */
+    height: 60px;
+}
+
+.totalPercent {
+    background-color: #4DC591;
+    padding: 10px;
+    color: white;
+    border-radius: 50%;
+    margin: 5px 0;
+    margin-right: 35px;
+    min-width: 55px;
+    text-align: center;
+}
+
+
+.stateObject {
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-select {
+    width: 70%;
+    font-size: 1vw;
+}
+
+.nameWorkSpace {
+    margin: 0 20px;
+    font-size: 1vw;
+}
+
+.arrow_titleObjective_update {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100%; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-toggle::after {
+    content: none !important;
+}
+
+.card-body-custom-kr {
+    padding-left: 0 !important;
+    padding-right: 30px !important;
+}
+
+.actionOkr {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* padding-right: ; */
+    /* background-color: blue; */
+    width: 100%;
+    height: auto;
+}
+
+.hrOkr {
+    margin-left: 30px;
+}
+
+.oneKr {
+    display: grid;
+    grid-template-columns: 7.5fr 2fr 4fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    font-size: 1vw;
+}
+
+.infoDeatailsOkr {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    margin-right: 20px;
+}
+
+.create-objective-part1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.comoboesGoal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+div .create-objective-chile:first-child {
+    width: 50%;
+}
+
+.create-objective-part1 .create-objective-chile {
+    width: 25%;
+    margin: 0 .25rem;
+}
+
+.fa-times:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.styleboxKr {
+    border: 2px dashed gray;
+    padding: 5px 5px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.labelTilteKr {
+    margin-right: 20px;
+}
+
+.showDeleteUpperKr {
+    display: none;
+}
+
+.showDeleteInInputKr {
+    display: block;
+    margin-left: 10px;
+}
+
+.addKrToList {
+    color: #5A8DEE;
+    margin-top: 10px;
+    cursor: pointer;
+    display: inline-block
+}
+
+.modal-body {
+    min-height: 65vh;
+    height: 65vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.boxCollapseCreate {
+    margin-top: 15px;
+}
+
+.btnModalCreateObjective {
+    font-size: 1vw;
+    width: 50%;
+    margin-right: 5px;
+}
+
+.btnAddObejective_period {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+
+.inputShowObject {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+    .inputShowObject:focus {
+        border-bottom: 1px solid #5A8DEE;
+        ;
+    }
+
+.inputShowValueObject {
+    width: 45%;
+    border: none;
+    outline: none;
+}
+
+    .inputShowValueObject:focus {
+        border-bottom: 1px solid #5A8DEE;
+    }
+
+.styleBoxChildObj {
+    margin-right: 40px;
+}
+
+/* .childObj{
+    border: 1px solid #DFE3E7;
+} */
+
+.iconEditObective {
+    width: 90% !important
+}
+
+.styleRoshdx {
+    margin: 0 5px;
+    margin-top: -7px;
+    width: 50%
+}
+
+.update-krObj {
+    width: 40% !important;
+}
+
+.update-rang-box {
+    width: 10% !important;
+}
+
+.totalPercent-forUpdate-kr {
+    background-color: #4DC591;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.box-ShowChileObj {
+    border: 1px solid gray;
+}
+
+.Header-ShowChileObj {
+    border-bottom: 1px solid gray;
+}
+
+.card-task {
+    padding: 3px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px 0;
+    /* pointer-events: none; */
+}
+
+.disable-task-update {
+    -webkit-text-decoration-line: line-through;
+    text-decoration-line: line-through;
+    pointer-events: none;
+    color: #b5bac6;
+}
+
+.disable-card-task {
+    pointer-events: none;
+}
+
+.drapdown-task-update {
+    width: 20%;
+}
+
+.card-task:hover, .card-task:hover input, .card-task:hover .drapdown-task-update {
+    background-color: #F5F7FC;
+    /* pointer-events: none; */
+}
+
+.IcondeleteTask {
+    display: none;
+}
+
+.info-task {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+
+.card-task:hover .IcondeleteTask {
+    display: block;
+}
+
+.showRoshdX {
+    margin-left: 10px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 10px;
+    color: gray;
+}
+
+.Status-for-update {
+    width: 80%;
+}
+
+.totalPercent-forUpdate {
+    background-color: #4DC591;
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.setRangPersentForUpdate {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nameUser {
+    background-color: beige;
+    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameUserAllCommnet {
+    background-color: beige;
+    border: 1px solid gray;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nameUser-hedearComment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.boxinputComment {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card-commentUser-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-edit-delete {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+    width: 100px;
+    padding: 5px 15px;
+    box-shadow: 0 0 5px 1px rgb(173, 173, 173);
+}
+
+.card-commentUser {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+    .card-commentUser:hover {
+        background-color: #F5F7FC;
+    }
+
+.iconEdit-deleteComment:hover {
+    color: #5A8DEE;
+    cursor: pointer;
+}
+
+.btn-cancel-saveEditCommnet {
+    margin-top: 10px;
+}
+
+    .btn-cancel-saveEditCommnet button {
+    }
+
+.box-inputEdiCommnet {
+    margin-top: 10px;
+    display: none;
+}
+
+.box-tagP_Commnet {
+    display: none;
+}
+
+.box-inputEdiCommnet-show {
+    display: block;
+}
+
+.card-feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-feed {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+    .card-feed:hover {
+        background-color: #F5F7FC;
+    }
+
+.Child-Objectives {
+    margin: 20px 0;
+}
+
+    .Child-Objectives h3 {
+        color: #5A8DEE;
+    }
+
+.StyleheadingCollapseChild-Objectives {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+    display: grid;
+    grid-template-columns: 3fr auto auto;
+    grid-template-rows: 1fr;
+}
+
+.persentKr {
+    padding: 10px;
+    /* margin-left: 5px; 
+    margin-right: 20px; */
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 70px;
+    /* background-color: #5A8DEE; */
+    min-width: 70px;
+}
+
+.drapDownSTATUS {
+    width: 130px !important;
+    min-width: 130px !important;
+}
+
+.fontSizeKr {
+    font-size: 1vw;
+}
+
+.numberOfRange {
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+    margin-left: 10px;
+}
+
+.customeSizeModalDelete .modal-body {
+    height: auto !important;
+    min-height: auto !important;
+    /* padding: 10px; */
+}
+
+@media(max-width:1200px) {
+    .custom-select {
+        width: 70%;
+        font-size: 1.3vw;
+    }
+}
+
+
+
+@media(max-width:767px) {
+
+    .styleBoxChildObj {
+        margin-right: 0;
+    }
+
+    .StyleheadingCollapseChild-Objectives {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-commentUser-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-task {
+        flex-direction: column;
+    }
+
+    .drapdown-task-update {
+        width: 100%;
+    }
+
+    .info-task {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .iconEditObective {
+        width: 75% !important
+    }
+
+    .styleRoshdx {
+        width: 100%
+    }
+
+    .pathSite {
+        display: none;
+    }
+
+    .btnAddObejective_period {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .btnModalCreateObjective {
+        font-size: 12px;
+        width: 60%;
+        margin-right: 0;
+    }
+
+    .custom-select {
+        width: 70%;
+        font-size: 10px;
+    }
+
+    .arrow_titleObjective_update {
+        font-size: 12px;
+        margin: 5px 5px;
+    }
+
+    .stateObject {
+        margin: 5px 5px;
+    }
+
+    .nameWorkSpace {
+        margin: 5px 5px;
+        font-size: 12px;
+        height: 30px !important;
+    }
+
+    .totalPercent {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .StyleheadingCollapse {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+
+
+    .btnUpdateObjective {
+        display: none;
+    }
+
+
+
+    .editObjective767Px {
+        display: block;
+    }
+
+
+
+    .create-objective-part1 .create-objective-chile {
+        width: 100% !important;
+    }
+
+    .btnUpdateObjective {
+        font-size: 1.5vw;
+        margin: 5px 0;
+    }
+
+    .create-objective-part1 {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .showDeleteUpperKr {
+        display: block;
+    }
+
+    .showDeleteInInputKr {
+        display: none;
+    }
+
+    .labelTilteKr {
+        margin-right: 0;
+    }
+
+    .comoboesGoal {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .comoboesGoal div {
+            width: 100%;
+        }
+
+    .inputShowObject {
+        width: 100%;
+    }
+
+    .oneKr {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        ;
+        margin-bottom: 10px;
+        padding-left: 15px;
+        font-size: 12px;
+    }
+
+    .infoDeatailsOkr {
+        margin: 0;
+        margin-top: 15px;
+    }
+}
+
+input,
+textarea {
+    margin: 5px 0;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: red;
+}

@@ -1,0 +1,79 @@
+﻿@model CreateUserByEmailModel
+
+@{
+    ViewData["Title"] = "ساخت با ایمیل";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <div class="fadeIn first" style="margin-top: .5rem">
+            <span class="header_info" style="font-weight: bold">@ViewData["Title"]</span>
+        </div>
+        <form name="model" id="frmCreateByEmail">
+            <hr />
+            <div class="form-group">
+                <input type="text" id="Email" class="fadeIn second" placeholder="ایمیل" asp-for="Email">
+                <br />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" id="FullName" class="fadeIn second" placeholder="نام" asp-for="FullName">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" id="btnCreateByEmail" class="fadeIn fourth" style="margin: 25px;" value="ثبت">
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        $("#btnCreateByEmail").click(function (e) {
+
+            e.preventDefault();
+
+            const isValid = $("#frmCreateByEmail").valid();
+            if (isValid) {
+                $(this).prop("disabled", true);
+
+                const model = {
+                    Email: $('#Email').val().trim(),
+                    FullName: $("#FullName").val().trim()
+                };
+
+                $.ajax({
+                    type: 'post',
+                    //dataType: 'json',
+                    contentType: "application/json; charset=utf-8",
+                    url: '/api/v1/user/CreateByEmail',
+                    data: JSON.stringify(model),
+                    success: function (result) {
+
+                        if (result.isSuccess) {
+                            toastr.success(result.message);
+                            setTimeout(
+                                function () {
+                                    window.location = "/Home/Index";
+                                }, 2000);
+                        }
+                    },
+                    error: function (error) {
+
+                        if (error.responseJSON.Message != undefined && error.responseJSON.Message != '')
+                            toastr.error(error.responseJSON.Message);
+                        else
+                            toastr.error('خطایی نامشخص رخ داده است!');
+
+                    },
+                    complete: function () {
+                        $("#btnCreateByEmail").prop("disabled", false);
+                    }
+                });
+            }
+        });
+
+    </script>
+}

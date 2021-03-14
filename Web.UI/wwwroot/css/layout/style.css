@@ -1,0 +1,23 @@
+.main-menu .navbar-header .navbar-brand .brand-text {
+    padding-right: 0 !important;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000000000000000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ffffff url('/image/layout/ajax-loader.gif') 50% 50% no-repeat;
+    background: rgba( 255, 255, 255, .8 ) url('/image/layout/ajax-loader.gif') 50% 50% no-repeat;
+}
+
+body.loading .modal {
+    overflow: hidden;
+}
+
+body.loading .modal {
+    display: block;
+}

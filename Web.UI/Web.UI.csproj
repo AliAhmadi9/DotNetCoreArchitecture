@@ -1,0 +1,103 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\MvcControllers\**" />
+    <!--<Compile Remove="Models\**" />-->
+    <Content Remove="Controllers\MvcControllers\**" />
+    <!--<Content Remove="Models\**" />-->
+    <EmbeddedResource Remove="Controllers\MvcControllers\**" />
+    <!--<EmbeddedResource Remove="Models\**" />-->
+    <None Remove="Controllers\MvcControllers\**" />
+    <!--<None Remove="Models\**" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Account\ChangePassword.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="NLog.Appsettings.Standard" Version="2.1.0" />
+    <PackageReference Include="NLog.Targets.Sentry3" Version="4.0.35" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.3" />
+    <PackageReference Include="WebEssentials.AspNetCore.PWA" Version="1.0.65" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\User\ChangePassword.cshtml" />
+    <None Include="Views\Account\Login.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="wwwroot\lib\bootstrap\3.3.4\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\3.3.4\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\3.3.4\dist\js\bootstrap2-toggle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\4.3.1\LICENSE" />
+    <None Include="wwwroot\fonts\iransans\woff2\IRANSansWeb.woff2" />
+    <None Include="wwwroot\fonts\iransans\woff2\IRANSansWeb_Black.woff2" />
+    <None Include="wwwroot\fonts\iransans\woff2\IRANSansWeb_Bold.woff2" />
+    <None Include="wwwroot\fonts\iransans\woff2\IRANSansWeb_Light.woff2" />
+    <None Include="wwwroot\fonts\iransans\woff2\IRANSansWeb_Medium.woff2" />
+    <None Include="wwwroot\fonts\iransans\woff2\IRANSansWeb_UltraLight.woff2" />
+    <None Include="wwwroot\fonts\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\fonts\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\fonts\webfonts\fa-duotone-900.svg" />
+    <None Include="wwwroot\fonts\webfonts\fa-duotone-900.woff2" />
+    <None Include="wwwroot\fonts\webfonts\fa-light-300.svg" />
+    <None Include="wwwroot\fonts\webfonts\fa-light-300.woff2" />
+    <None Include="wwwroot\fonts\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\fonts\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\fonts\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\fonts\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jqueryui\jquery-ui.js" />
+    <None Include="wwwroot\lib\jqueryui\jquery-ui.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Web.ApiControllers\Web.ApiControllers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Views\Shared\Components\" />
+  </ItemGroup>
+
+
+</Project>

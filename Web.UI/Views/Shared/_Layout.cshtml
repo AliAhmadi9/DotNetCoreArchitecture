@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html class="loading" lang="fa" data-textdirection="rtl" dir="rtl">
+<!-- BEGIN: Head-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>@ViewData["Title"] - هدف سنج</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/ico/favicon.ico">
+    <meta name="theme-color" content="#5A8DEE">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/vendors/css/extensions/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/vendors/css/tables/datatable/datatables.min.css" asp-append-version="true">
+    <!-- END: Vendor CSS-->
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/css/components.css">
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" asp-append-version="true" href="/assets/css/pages/dashboard-ecommerce.css">
+
+    <!-- BEGIN: Page CSS-->
+    <!-- BEGIN: Ali CSS-->
+    <link href="~/lib/toastr.js/toastr.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" asp-append-version="true" href="/assets/fontawesome-pro-5.8.2-web/css/fontawesome-pro-5.8.2.css">
+    <link href="/css/layout/style.css" asp-append-version="true" rel="stylesheet" />
+    <!-- END: Ali CSS-->
+    @await RenderSectionAsync("styles", false)
+</head>
+<!-- END: Head-->
+<!-- BEGIN: Body-->
+<body class="vertical-layout vertical-menu-modern semi-dark-layout 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" data-layout="semi-dark-layout">
+
+    <!-- BEGIN: Header-->
+    <div class="header-navbar-shadow"></div>
+    <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
+                        </ul>
+
+                    </div>
+                    <ul class="nav navbar-nav float-right">
+
+                        <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon bx bx-fullscreen"></i></a></li>
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name">@User.FindFirstValue(ClaimTypes.Email).Split('@')[0]</span>
+                                    <span class="user-status text-muted">فعال</span>
+                                </div>
+                                <span>
+                                    <img class="round" src="/assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40">
+                                </span>
+                            </a>
+                            <div class="dropdown-menu pb-0">
+                                <a class="dropdown-item" href="#"><i class="bx bx-user mr-50"></i> ویرایش پروفایل</a>
+                                <a class="dropdown-item" href="#"><i class="bx bx-cog mr-50"></i> تنظیمات فضای کاری</a>
+                                <a class="dropdown-item" href="#"><i class="bx  bx-lock-alt mr-50"></i> تغییر رمز عبور</a>
+                                <div class="dropdown-divider mb-0"></div><a class="dropdown-item" asp-controller="Account" asp-action="Logout"><i class="bx bx-power-off mr-50"></i> خروج</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="#">
+                        <div class="brand-logo"><i class="fas fa-bullseye-arrow"></i></div>
+                        <h2 class="brand-text mb-0">هدف سنج</h2>
+                    </a>
+                </li>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block primary" data-ticon="bx-disc"></i></a></li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
+                
+                <li class="navigation-header">
+                    <span>منو</span>
+                </li>
+                <li class=" nav-item">
+                    <a href="#"><i class="menu-livicon" data-icon="thumbnails-big"></i><span class="menu-title" data-i18n="thumbnails-big">صفحه اصلی</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+    </div>
+    <!-- END: Content-->
+    <!--</div>-->
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!--modal when ajax request is sending-->
+    <div class="modal"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0">
+            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+        </p>
+    </footer>
+    <!-- END: Footer-->
+    <!-- BEGIN: Vendor JS-->
+    <script asp-append-version="true" src="/assets/vendors/js/vendors.min.js"></script>
+    <script asp-append-version="true" src="/assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.min.js"></script>
+    <script asp-append-version="true" src="/assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script asp-append-version="true" src="/assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+    <!-- BEGIN: Ali js-->
+    <script src="/assets/fontawesome-pro-5.8.2-web/js/fontawesome-pro-5.8.2.js" asp-append-version="true"></script>
+    <script src="~/lib/toastr.js/toastr.min.js" asp-append-version="true"></script>
+    <script src="~/js/layout/script.js" asp-append-version="true"></script>
+    <!-- END: Ali js-->
+    <!-- BEGIN: Theme JS-->
+    <script asp-append-version="true" src="/assets/js/scripts/configs/vertical-menu-dark.js"></script>
+    <script asp-append-version="true" src="/assets/js/core/app-menu.js"></script>
+    <script asp-append-version="true" src="/assets/js/core/app.js"></script>
+    <script asp-append-version="true" src="/assets/js/scripts/components.js"></script>
+    <script asp-append-version="true" src="/assets/js/scripts/footer.js"></script>
+    <script asp-append-version="true" src="/assets/js/scripts/customizer.js"></script>
+    <!-- END: Theme JS-->
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="/assets/vendors/js/ui/jquery.sticky.js" asp-append-version="true"></script>
+    <script src="/assets/vendors/js/tables/datatable/datatables.min.js" asp-append-version="true"></script>
+    <script src="/assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js" asp-append-version="true"></script>
+    <script src="/assets/vendors/js/tables/datatable/dataTables.buttons.min.js" asp-append-version="true"></script>
+    <script src="/assets/vendors/js/tables/datatable/buttons.html5.min.js" asp-append-version="true"></script>
+    <script src="/assets/vendors/js/tables/datatable/buttons.print.min.js" asp-append-version="true"></script>
+    <script src="/assets/vendors/js/tables/datatable/buttons.bootstrap.min.js" asp-append-version="true"></script>
+    <script src="/assets/vendors/js/tables/datatable/pdfmake.min.js" asp-append-version="true"></script>
+    <script src="/assets/vendors/js/tables/datatable/vfs_fonts.js" asp-append-version="true"></script>
+    <!-- END: Page Vendor JS-->
+    <!-- BEGIN: Page JS-->
+    <script asp-append-version="true" src="/assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+    <!-- END: Page JS-->
+    @await RenderSectionAsync("scripts", false)
+</body>
+<!-- END: Body-->
+</html>

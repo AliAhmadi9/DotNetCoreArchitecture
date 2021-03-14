@@ -1,0 +1,126 @@
+﻿@model UserEditModel
+
+@{
+    ViewData["Title"] = "ویرایش";
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-header row">
+    <div class="content-header-left col-12 mb-2 mt-1">
+        <div class="row breadcrumbs-top">
+            <div class="col-12">
+                <h5 class="content-header-title float-left pr-1"> پروفایل</h5>
+                <div class="breadcrumb-wrapper">
+                    <ol class="breadcrumb p-0 mb-0">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Home" asp-action="Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            ویرایش پروفایل
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-body">
+    <!-- account setting page start -->
+    <section id="page-account-settings">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <!-- left menu section -->
+                    <!-- right content section -->
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="account-vertical-general" aria-labelledby="account-pill-general" aria-expanded="true">
+                                            <div class="media">
+                                                <a href="javascript:void(0);">
+                                                    <img src="/assets/images/portrait/small/avatar-s-16.jpg" class="rounded mr-75" alt="profile image" height="64" width="64">
+                                                </a>
+                                                <div class="media-body mt-25">
+                                                    <div class="col-12 px-0 d-flex flex-sm-row flex-column justify-content-start">
+                                                        <label for="select-files" class="btn btn-sm btn-light-primary ml-50 mb-50 mb-sm-0">
+                                                            <span>ارسال تصویر جدید</span>
+                                                            <input id="select-files" type="file" hidden>
+                                                        </label>
+                                                        <button class="btn btn-sm btn-light-secondary ml-50">بازنشانی</button>
+                                                    </div>
+                                                    <p class="text-muted ml-1 mt-50"><small>فایل های مجاز: JPG، PNG و GIF. حداکثر اندازه مجاز: 800KB</small></p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <form id="frmUpdateUserInformation">
+                                                <input type="hidden" value="@Model.MembershipId" asp-for="MembershipId" id="MembershipId"/>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <div class="controls">
+                                                                <label asp-for="FullName"></label>
+                                                                <input asp-for="FullName" id="FullName" value="@Model.FullName" type="text" class="form-control text-left" placeholder="مثال: علی جودکی" dir="ltr">
+                                                                <span asp-validation-for="FullName" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <div class="controls">
+                                                                <label asp-for="JobTitle"></label>
+                                                                <input type="text" asp-for="JobTitle" id="JobTitle" value="@Model.JobTitle" class="form-control" placeholder="مثال: برنامه نویس">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <div class="controls">
+                                                                <label asp-for="Email"></label>
+                                                                <input asp-for="Email" type="text" class="form-control text-left" readonly value="@Model.Email" dir="ltr">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label asp-for="Users"></label>
+                                                            <select class="form-control" id="Manager" asp-items="@Model.Users">
+                                                                <option value="@null">یک ناظر انتخاب کنید</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <label asp-for="WDYD"></label>
+                                                            <textarea asp-for="WDYD" class="form-control" id="WDYD" rows="3" placeholder="توضیحاتی را وارد کنید ..">@Model.WDYD</textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 d-flex flex-sm-row flex-column justify-content-end">
+                                                        <button type="submit" id="btnUpdateUserInformation" class="btn btn-primary glow mr-sm-1 mb-1">ذخیره تغییرات</button>
+                                                        <button type="reset" class="btn btn-light mb-1">انصراف</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section scripts
+{
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" asp-append-version="true"></script>
+    <script src="~/lib/toastr.js/toastr.min.js" asp-append-version="true"></script>
+    <script src="~/js/layout/user.js" asp-append-version="true"></script>
+}

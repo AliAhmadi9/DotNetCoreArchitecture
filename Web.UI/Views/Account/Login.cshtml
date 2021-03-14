@@ -1,0 +1,59 @@
+﻿@model LoginModel
+
+@{
+    ViewData["Title"] = "ورود";
+    Layout = "/Views/Shared/_LoginRegisterLayout.cshtml";
+}
+
+<section id="auth-login" class="row flexbox-container">
+    <div class="col-xl-8 col-11">
+        <div class="card bg-authentication mb-0">
+            <div class="row m-0">
+                <!-- left section-login -->
+                <div class="col-md-6 col-12 px-0">
+                    <div class="card disable-rounded-right mb-0 p-2 h-100 d-flex justify-content-center">
+                        <div class="card-header pb-1">
+                            <div class="card-title">
+                                <h4 class="text-center mb-2">به سیستم هدف گذاری هدف سنج خوش آمدید</h4>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <form id="frmLogin">
+                                    <div class="form-group mb-50">
+                                        <label class="text-bold-700" asp-for="Email"></label>
+                                        <input type="text" asp-for="Email" id="Email" class="form-control text-left" placeholder="آدرس ایمیل" dir="ltr">
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-bold-700" asp-for="Password"></label>
+                                        <input type="password" asp-for="Password" class="form-control text-left" id="Password" placeholder="رمز عبور" dir="ltr">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group d-flex flex-md-row flex-column justify-content-between align-items-center">
+                                        <div class="text-left">
+                                            <div class="checkbox checkbox-sm">
+                                                <input type="checkbox" id="RememberMe" class="form-check-input" asp-for="RememberMe">
+                                                <label class="checkboxsmall" asp-for="RememberMe"><small>مرا به خاطر بسپار</small></label>
+                                            </div>
+                                        </div>
+                                        <div class="text-right line-height-2"><a asp-controller="Account" asp-action="ForgotPassword" class="card-link"><small>رمز عبورتان را فراموش کرده اید؟</small></a></div>
+                                    </div>
+                                    <button type="submit" id="btnLogin" data-returnUrl="@Model.ReturnUrl" class="btn btn-primary glow w-100 position-relative">ورود<i id="icon-arrow" class="bx bx-left-arrow-alt"></i></button>
+                                </form>
+                                <hr>
+                                <div class="text-center"><small class="mr-25">حسابی ندارید؟</small><a asp-controller="Account" asp-action="Register"><small>ثبت نام</small></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right section image -->
+                <div class="col-md-6 d-md-block d-none text-center align-self-center p-3">
+                    <div class="card-content">
+                        <img class="img-fluid" src="/assets/images/pages/login.png" alt="branding logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
